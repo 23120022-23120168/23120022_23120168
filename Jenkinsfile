@@ -26,7 +26,7 @@ pipeline {
                     sh '''
                     echo $DOCKER_PASS | docker login -u $DOCKER_USER --password-stdin
                     docker tag myapp:latest 23120022and23120168/repository:myapp-latest
-                    docker push :latest
+                    docker push 23120022and23120168/repository:myapp-latest
                     '''
                 }
             }
