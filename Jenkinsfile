@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent { 
+        node {
+            label 'jenkins-agent-docker'
+      }
+    }
     stages {
         stage('Pull source') {
             steps {
